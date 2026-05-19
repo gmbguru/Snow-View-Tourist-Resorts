@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Temporarily Unavailable</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Plus Jakarta Sans', sans-serif; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+    @keyframes pulse-ring { 0%{transform:scale(1);opacity:.6} 100%{transform:scale(1.4);opacity:0} }
+    .float-anim { animation: float 4s ease-in-out infinite; }
+    .pulse-ring { position:relative; }
+    .pulse-ring::before { content:''; position:absolute; inset:-6px; border-radius:9999px; background:rgba(37,211,102,.3); animation:pulse-ring 2s ease-out infinite; z-index:-1; }
+    .glass { background:rgba(255,255,255,.7); backdrop-filter:blur(16px); border:1px solid rgba(255,255,255,.5); }
+    .fade-up { opacity:0; transform:translateY(30px); transition:all .6s ease; }
+    .fade-up.visible { opacity:1; transform:translateY(0); }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full">
+  <div id="app" class="h-full w-full overflow-auto bg-gradient-to-br from-blue-50 via-white to-indigo-50"><!-- Hero -->
+   <section class="fade-up pt-16 pb-8 px-4 text-center max-w-2xl mx-auto">
+    <div class="float-anim mx-auto w-48 h-48 mb-8">
+     <svg viewbox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="40" y="50" width="120" height="90" rx="12" fill="#e0e7ff" stroke="#6366f1" stroke-width="3" /> <rect x="55" y="65" width="90" height="50" rx="6" fill="#fff" stroke="#a5b4fc" stroke-width="2" /> <circle cx="100" cy="90" r="12" fill="#fbbf24" stroke="#f59e0b" stroke-width="2" /> <path d="M94 90l4 4 8-8" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /> <rect x="85" y="140" width="30" height="8" rx="4" fill="#6366f1" /> <circle cx="155" cy="55" r="8" fill="#fca5a5" /> <path d="M152 52l6 6m0-6l-6 6" stroke="#dc2626" stroke-width="2" stroke-linecap="round" /> <path d="M60 155h80" stroke="#c7d2fe" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 4" />
+     </svg>
+    </div>
+    <h1 id="headline" class="text-3xl md:text-4xl font-800 text-gray-900 mb-4 leading-tight">Website Temporarily Unavailable</h1>
+    <p id="subheadline" class="text-gray-600 text-base md:text-lg leading-relaxed max-w-lg mx-auto">Our hosting plan has expired temporarily. Your website can be restored quickly. Please contact your website provider to make it live again.</p>
+   </section><!-- Status Card -->
+   <section class="fade-up px-4 max-w-md mx-auto mb-10">
+    <div class="glass rounded-2xl p-6 shadow-lg shadow-blue-100/40">
+     <h2 class="text-sm font-700 text-gray-500 uppercase tracking-wider mb-4">Current Status</h2>
+     <div class="space-y-3">
+      <div class="flex items-center gap-3">
+       <span class="text-xl">✅</span><span class="text-gray-800 font-500">Domain Safe</span>
+      </div>
+      <div class="flex items-center gap-3">
+       <span class="text-xl">⚠️</span><span class="text-amber-700 font-600">Hosting Expired</span>
+      </div>
+      <div class="flex items-center gap-3">
+       <span class="text-xl">🔄</span><span class="text-gray-800 font-500">Website Can Be Restored Quickly</span>
+      </div>
+     </div>
+    </div>
+   </section><!-- CTA -->
+   <section class="fade-up px-4 max-w-md mx-auto mb-10 text-center">
+    <h2 id="cta-headline" class="text-xl md:text-2xl font-700 text-gray-900 mb-6">Need To Make Your Website Live Again?</h2><a href="https://wa.me/917258068121" target="_blank" rel="noopener noreferrer" class="pulse-ring inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-700 text-lg px-8 py-4 rounded-full shadow-lg shadow-green-200 transition-all duration-300 mb-4 w-full justify-center"> <i data-lucide="message-circle" style="width:22px;height:22px;"></i> Chat on WhatsApp </a> <a href="tel:+917258068121" class="inline-flex items-center gap-3 bg-white hover:bg-gray-50 text-gray-800 font-600 text-base px-8 py-3.5 rounded-full border border-gray-200 shadow-sm transition-all duration-300 w-full justify-center"> <i data-lucide="phone" style="width:18px;height:18px;"></i> Call Provider: +91 7258068121 </a>
+   </section><!-- Trust -->
+   <section class="fade-up px-4 max-w-md mx-auto mb-12 text-center">
+    <div class="glass rounded-2xl p-5">
+     <p id="trust-message" class="text-gray-600 text-sm leading-relaxed flex items-start gap-2 justify-center"><i data-lucide="shield-check" style="width:18px;height:18px;color:#6366f1;flex-shrink:0;margin-top:2px;"></i> Don't worry — your website can be restored quickly by renewing hosting services.</p>
+    </div>
+   </section><!-- Footer -->
+   <footer class="fade-up text-center pb-24 px-4">
+    <p class="text-xs text-gray-400">This website is temporarily unavailable due to hosting expiration.</p>
+   </footer><!-- Floating WhatsApp --> <a href="https://wa.me/917258068121" target="_blank" rel="noopener noreferrer" class="pulse-ring fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl shadow-green-200 transition-all"> <i data-lucide="message-circle" style="width:26px;height:26px;"></i> </a>
+  </div>
+  <script>
+  lucide.createIcons();
+
+  // Scroll animations
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+  // Element SDK
+  const defaultConfig = {
+    headline: "Website Temporarily Unavailable",
+    subheadline: "Our hosting plan has expired temporarily. Your website can be restored quickly. Please contact your website provider to make it live again.",
+    cta_headline: "Need To Make Your Website Live Again?",
+    trust_message: "Don't worry — your website can be restored quickly by renewing hosting services.",
+    primary_color: "#6366f1",
+    surface_color: "#ffffff",
+    text_color: "#111827",
+    cta_color: "#22c55e",
+    secondary_color: "#e0e7ff",
+    font_family: "Plus Jakarta Sans",
+    font_size: 16
+  };
+
+  window.elementSdk.init({
+    defaultConfig,
+    onConfigChange: async (config) => {
+      const c = { ...defaultConfig, ...config };
+      document.getElementById('headline').textContent = c.headline;
+      document.getElementById('subheadline').textContent = c.subheadline;
+      document.getElementById('cta-headline').textContent = c.cta_headline;
+      const tm = document.getElementById('trust-message');
+      tm.innerHTML = `<i data-lucide="shield-check" style="width:18px;height:18px;color:${c.primary_color};flex-shrink:0;margin-top:2px;"></i>${c.trust_message}`;
+      lucide.createIcons();
+      document.body.style.fontFamily = `${c.font_family}, sans-serif`;
+      document.getElementById('headline').style.fontSize = `${c.font_size * 2.2}px`;
+    },
+    mapToCapabilities: (config) => {
+      const c = { ...defaultConfig, ...config };
+      const make = (key) => ({ get:()=>c[key]||defaultConfig[key], set:(v)=>{c[key]=v;window.elementSdk.setConfig({[key]:v})} });
+      return {
+        recolorables: [make('primary_color'),make('surface_color'),make('text_color'),make('cta_color'),make('secondary_color')],
+        borderables: [],
+        fontEditable: make('font_family'),
+        fontSizeable: { get:()=>c.font_size||defaultConfig.font_size, set:(v)=>{c.font_size=v;window.elementSdk.setConfig({font_size:v})} }
+      };
+    },
+    mapToEditPanelValues: (config) => {
+      const c = { ...defaultConfig, ...config };
+      return new Map([
+        ["headline", c.headline],
+        ["subheadline", c.subheadline],
+        ["cta_headline", c.cta_headline],
+        ["trust_message", c.trust_message]
+      ]);
+    }
+  });
+</script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9fe0e31427ed28cd',t:'MTc3OTE3MDQ4Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
